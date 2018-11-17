@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant|Forum|Gilda+Display|Raleway+Dots" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="cunyConnectedStyles.css">
+
+	<title>Reco</title>
+</head>
+<body onresize="resizeElements()">
+	<div class=container-fluid>
+		<nav class="navbar navbar-dark bg-dark justify-content-between" id="navbar-top" onclick="hamburgler(this)" >
+  				<a class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Reco</a>
+    			<form action="./cunyConnect.html" method="get" class="form-inline ml-sm-0 mr-auto col-lg-8" id="searchDiv">
+      				<input class="form-control ml-auto mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
+      				<button class="btn btn-outline-success my-1 mr-auto" type="submit">Search</button>
+    			</form>
+		</nav> 
+		<span class="dropdown-menu row" id="myDropdown">
+			<ul>
+				<li><STRONG>Events</STRONG></li>
+				<li><STRONG>Friends</STRONG></li>
+			</ul>
+		</span>
+	<div class="bodyBack">
+		<img src="./map.png"/>
+		<span class="dropdown-menu" id="myDropdown">
+			<ul>
+				<li>Item</li>
+			</ul>
+		</span>
+	<script src="./documentLoad.js"></script>
+	<!-- <script src="./eventLoad.js"></script> -->
+</body>
+</html>
