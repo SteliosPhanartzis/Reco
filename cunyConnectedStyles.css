@@ -24,11 +24,12 @@
 	font-size: 28px;
 	font-weight: bold;
 	max-width: 25%;
+	display: inline;
 }
-#upCUM img{
-	border-radius: 5%;
-	/*box-shadow: */
+#map {
+    height: 100vh;
 }
+
 .img-fluid {
 	margin-left: 5%;
 }
@@ -65,6 +66,7 @@
 	background-color: #FFF;   
 	margin: 6px auto;
 	transition: 0.1s ease-in-out;
+	display: block;
 }
 .change .bar1 {
 -webkit-transform: rotate(-45deg) translate-9px, 6px);
