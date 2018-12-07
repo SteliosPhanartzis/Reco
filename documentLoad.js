@@ -19,4 +19,5 @@ function pageContentsOffset(){
 function resizeElements(){
 	pageContentsOffset();
 }
+
 pageContentsOffset();

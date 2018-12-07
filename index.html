@@ -5,12 +5,11 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<<<<<<< HEAD
 	<meta charset="UTF-8"> 	
-=======
 
->>>>>>> b6207b952a098099765175580acfdd9044142a9d
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" href="cunyConnectedStyles.css">
@@ -19,13 +18,12 @@
 </head>
 <body onresize="resizeElements()">
 	<div class=container-fluid>
-<<<<<<< HEAD
 		<nav class="navbar navbar-dark bg-dark justify-content-between col-12" id="navbar-top" >
   				<div class="ml-0 mr-auto d-inline">
   					<div class = "hamburgler d-inline-block ml-0 mr-5" onclick="hamburgler(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
   					<a class="navbar-brand ml-auto mr-0 d-inline" id="brandName" href="">Reco</a>
   				</div>
-    			<form action="./cunyConnect.html" method="get" class="form-inline ml-auto mr-auto col-10" id="searchDiv">
+    			<form method="get" class="form-inline ml-auto mr-auto col-10" id="searchDiv">
       				<input class="form-control ml-auto mr-2" type="search" placeholder="Search" aria-label="Search" id="search">
       				<button class="btn btn-outline-success mr-auto" type="submit">Search</button>
     			</form>
@@ -41,139 +39,141 @@
 		</span>
 	</div>
     <div id="map"></div>
+
+    <p class="hide">Address: <input type="text" class="search_addr" size="45"></p>
+    <p class="hide">Latitude: <input type="text" class="search_latitude" size="30"></p>
+    <p class="hide">Longitude: <input type="text" class="search_longitude" size="30"></p>
+
 	<script>
       var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.712776, lng: -74.005974},
-          zoom: 12
-        //             styles: [
-        //     {elementType: 'geometry', stylers: [{color: '#ddbbaa'}]},
-        //     {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-        //     {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
-        //     {
-        //       featureType: 'administrative.locality',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#aaaaaa'}]
-        //     },
-        //     {
-        //       featureType: 'poi',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#aaddff'}]
-        //     },
-        //     {
-        //       featureType: 'poi.park',
-        //       elementType: 'geometry',
-        //       stylers: [{color: '#263c3f'}]
-        //     },
-        //     {
-        //       featureType: 'poi.park',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#aaffaa'}]
-        //     },
-        //     {
-        //       featureType: 'road',
-        //       elementType: 'geometry',
-        //       stylers: [{color: '#38414e'}]
-        //     },
-        //     {
-        //       featureType: 'road',
-        //       elementType: 'geometry.stroke',
-        //       stylers: [{color: '#212a37'}]
-        //     },
-        //     {
-        //       featureType: 'road',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#9ca5b3'}]
-        //     },
-        //     {
-        //       featureType: 'road.highway',
-        //       elementType: 'geometry',
-        //       stylers: [{color: '#446688'}]
-        //     },
-        //     {
-        //       featureType: 'road.highway',
-        //       elementType: 'geometry.stroke',
-        //       stylers: [{color: '#1f2835'}]
-        //     },
-        //     {
-        //       featureType: 'road.highway',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#f3d19c'}]
-        //     },
-        //     {
-        //       featureType: 'transit',
-        //       elementType: 'geometry',
-        //       stylers: [{color: '#2f3948'}]
-        //     },
-        //     {
-        //       featureType: 'transit.station',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#d59563'}]
-        //     },
-        //     {
-        //       featureType: 'water',
-        //       elementType: 'geometry',
-        //       stylers: [{color: '#88aacc'}]
-        //     },
-        //     {
-        //       featureType: 'water',
-        //       elementType: 'labels.text.fill',
-        //       stylers: [{color: '#515c6d'}]
-        //     },
-        //     {
-        //       featureType: 'water',
-        //       elementType: 'labels.text.stroke',
-        //       stylers: [{color: '#17263c'}]
-        //     }
-        //   ]
+      var geocoder;
+      var marker;
 
-         });
-      }
+      function initMap() {
+        var initialLat = $('.search_latitude').val();
+        var initialLong = $('.search_longitude').val();
+        initialLat = initialLat?initialLat:40.712776;
+        initialLong = initialLong?initialLong:-74.005974;
+
+        var latlng = new google.maps.LatLng(initialLat, initialLong);
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: latlng,
+          zoom: 12
+        });
+
+        geocoder = new google.maps.Geocoder();
+        
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: true,
+            position: latlng
+        });
+
+        google.maps.event.addListener(marker, "dragend", function () {
+            var point = marker.getPosition();
+            map.panTo(point);
+            geocoder.geocode({'latLng': marker.getPosition()}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $('.search_addr').val(results[0].formatted_address);
+                    $('.search_latitude').val(marker.getPosition().lat());
+                    $('.search_longitude').val(marker.getPosition().lng());
+                }
+            });
+        });
+    }
+
+        $(document).ready(function () {
+        //load google map
+        initMap();
+    
+        /*
+         * autocomplete location search
+         */
+        var PostCodeid = '#search';
+        $(function () {
+            $(PostCodeid).autocomplete({
+                source: function (request, response) {
+                    geocoder.geocode({
+                        'address': request.term
+                    }, function (results, status) {
+                        response($.map(results, function (item) {
+                            return {
+                                label: item.formatted_address,
+                                value: item.formatted_address,
+                                lat: item.geometry.location.lat(),
+                                lon: item.geometry.location.lng()
+                            };
+                        }));
+                    });
+                },
+                select: function (event, ui) {
+                    $('.search_addr').val(ui.item.value);
+                    $('.search_latitude').val(ui.item.lat);
+                    $('.search_longitude').val(ui.item.lon);
+                    var latlng = new google.maps.LatLng(ui.item.lat, ui.item.lon);
+                    marker.setPosition(latlng);
+                    initMap();
+                }
+            });
+        });
+        
+        /*
+         * Point location on google map
+         */
+        $('.get_map').click(function (e) {
+            var address = $(PostCodeid).val();
+            geocoder.geocode({'address': address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    marker.setPosition(results[0].geometry.location);
+                    $('.search_addr').val(results[0].formatted_address);
+                    $('.search_latitude').val(marker.getPosition().lat());
+                    $('.search_longitude').val(marker.getPosition().lng());
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            e.preventDefault();
+        });
+
+        //Add listener to marker for reverse geocoding
+        google.maps.event.addListener(marker, 'drag', function () {
+            geocoder.geocode({'latLng': marker.getPosition()}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        $('.search_addr').val(results[0].formatted_address);
+                        $('.search_latitude').val(marker.getPosition().lat());
+                        $('.search_longitude').val(marker.getPosition().lng());
+                    }
+                }
+            });
+        });
+});
+        // var searchBox = new google.maps.places.SearchBox(document.getElementById('searchDiv'));
+
+        // google.maps.event.addListener(searchBox, 'places_changed', function(){
+
+        //     var places = searchBox.getPlaces();
+
+        //     var bounds = new google.maps.LatLngBounds();
+        //     var i, place;
+
+        //     for(i=0;place=places[i];i++){
+        //         bounds.extend(place.geometry.location);
+        //         marker.setPosition(place.geometry.location);
+        //     }
+
+        //     map.fitBounds(bounds);
+        //     map.setZoom(15);
+       // });
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtGxlx-hvrPaP3c9PDAheL0QJhkokyCXw&callback=initMap"
     async defer></script>
 
 	<script src="./documentLoad.js"></script>
 	<!-- <script src="./eventLoad.js"></script> -->
-=======
-
-			<nav class="navbar navbar-dark bg-dark justify-content-between" id="navbar-top"  >
-	  				<a class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Reco</a>
-	    			<form onclick="hamburgler(this)" action="./cunyConnect.html" method="get" class="form-inline ml-sm-0 mr-auto col-lg-8" id="searchDiv">
-	      				<input class="form-control ml-auto mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
-	      				<button class="btn btn-outline-success my-1 mr-auto" type="submit">Search</button>
-	    			</form>
-			</nav>
-
-			<span class="dropdown-menu row" id="myDropdown">
-				<ul>
-					<li><STRONG>Events</STRONG></li>
-					<li><STRONG>Friends</STRONG></li>
-				</ul>
-			</span>
-
-			<div class="r">
-				<div class="cl-12 tex-dark txt-center">
-					<p>
-
-					</p>
-				</div>
-		</div>
-
-
-			<div class="row bodyBack">
-				<img src="./map.png"/>
-					<span class="dropdown-menu" id="myDropdown">
-						<ul>
-							<li>Item</li>
-						</ul>
-					</span>
-				<script src="./documentLoad.js"></script>
-			</div>
-
-
-	</div>
->>>>>>> b6207b952a098099765175580acfdd9044142a9d
 </body>
 </html>
