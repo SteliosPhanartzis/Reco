@@ -10,6 +10,12 @@
 .hide{
 	display: none;
 }
+#loginForm{
+	display: none;
+}
+#loginTrigger{
+	cursor: pointer;
+}
 #FeaturedPhotos .col-lg-3:hover{
 	background: radial-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.5),rgba(255,255,255,0.1));
 	transition: 0.2s ease-in-out;
