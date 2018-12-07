@@ -31,34 +31,59 @@
     				Login
     			</div>
         </nav> 
-                <form class = "form-inline" style="position:absolute; left: 35%; top: 40%; background-color: white; z-index: 100; width: 30%; height: 30vh;" id = "loginForm">
+                <form class = "form-inline" style="position:absolute; left: 35%; top: 40%; background-color: white; z-index: 100; width: 30%; height: 20%;" id = "loginForm">
                     <div class = "form-inline ml-5">
                         <label for = "user">Username:</label>
-                        <input class = "form-inline" type = "text" name = "user" id = "user">
+                        <input class = "form-control" style = "width: 70%;" type = "text" name = "user" id = "user">
                     </div>
                     <div class = "form-inline ml-5">
                         <label for = "pass">Password:</label>
-                        <input class = "form-inline" type = "password" name = "pass" id = "pass">
+                        <input class = "form-control" style = "width: 70%;" type = "password" name = "pass" id = "pass">
                     </div> 
                     <div class = "form-inline" style = "display: flex; margin-left: 75%;">
-                        <input style = "display: flex;" type = "submit" name = "submitLogin" id = "submitLogin" value = "Login">
+                        <input  class = "btn" style = "display: flex;" type = "submit" name = "submitLogin" id = "submitLogin" value = "Login">
                     </div>
                 </form>
 		<span class="dropdown-menu row" id="myDropdown">
 			<ul>
-				<li><STRONG>Events</STRONG></li>
-				<li><STRONG>Friends</STRONG></li>
+				<li>
+                    <h2 id = "eventsSide">Events</h2>
+                    <ul>
+                        <li><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Northside Festival</a></li>
+                        <li><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">House of Yes</a></li>
+                        <li><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Then She Fell</a></li>
+                        <li><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Museum of the Moving Image</a></li>
+                    </ul>
+                </li>
+
+				<li>
+                    <h2>Friends</h2>
+                    <ul id = "FriendsList">
+                        <li><span onclick = "chatWindow(this.innerHTML)">Nelson Zeas</span><div class = "online"></div></li>
+                        <li><span onclick = "chatWindow(this.innerHTML)">Quazi Hossain</span><div class = "offline"></div></li>
+                        <li><span onclick = "chatWindow(this.innerHTML)">Syed Javaid</span><div class = "offline"></div></li>
+                    </ul>
+                </li>
 			</ul>
 		</span>
 	</div>
     <div id="map"></div>
+
+<div class="containerChat" id = "theChat">
+    <h4 class="display-4 text-center"> <span id = "chatTitle"> User </span><input type = "button" class = "btn" value = "X" style = "float: right;" onclick = "closeChat()"></span></h4>
+    <div class="chatBox" id="chatBox">
+        <div class="response"><strong>Nelson:</strong> <br>Are we going to present?</div>
+        <div id="request"></div>
+    </div>
+    <input class="w3-input" id="mesbox" type="text" placeholder="input here...">         
+</div>
 
     <p class="hide">Address: <input type="text" class="search_addr" size="45"></p>
     <p class="hide">Latitude: <input type="text" class="search_latitude" size="30"></p>
     <p class="hide">Longitude: <input type="text" class="search_longitude" size="30"></p>
 
 	<script>
-      var map;
+      var map, places;
       var geocoder;
       var marker;
 
@@ -168,6 +193,44 @@
                 }
             });
         });
+
+      //   places = new google.maps.places.PlacesService(map);
+
+      // function onPlaceChanged() {
+      //   var place = autocomplete.getPlace();
+      //   if (place.geometry) {
+      //     map.panTo(place.geometry.location);
+      //     map.setZoom(15);
+      //     search();
+      //   } else {
+      //     document.getElementById('autocomplete').placeholder = 'Enter a city';
+      //   }
+      // }
+
+      //   places.nearbySearch(search, function(results, status) {
+      //     if (status === google.maps.places.PlacesServiceStatus.OK) {
+      //       clearResults();
+      //       clearMarkers();
+      //       // Create a marker for each hotel found, and
+      //       // assign a letter of the alphabetic to each marker icon.
+      //       for (var i = 0; i < results.length; i++) {
+      //         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+      //         var markerIcon = MARKER_PATH + markerLetter + '.png';
+      //         // Use marker animation to drop the icons incrementally on the map.
+      //         markers[i] = new google.maps.Marker({
+      //           position: results[i].geometry.location,
+      //           animation: google.maps.Animation.DROP,
+      //           icon: markerIcon
+      //         });
+      //         // If the user clicks a hotel marker, show the details of that hotel
+      //         // in an info window.
+      //         markers[i].placeResult = results[i];
+      //         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+      //         setTimeout(dropMarker(i), i * 100);
+      //         addResult(results[i], i);
+      //       }
+      //     }
+      //   });
 });
         // var searchBox = new google.maps.places.SearchBox(document.getElementById('searchDiv'));
 

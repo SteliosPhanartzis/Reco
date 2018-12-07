@@ -1,3 +1,7 @@
+var divr = '<div class="request">';
+var input;
+var mes = document.getElementById('request');
+
 function hamburgler(x){
     x.classList.toggle("change");
     var dropdown = document.getElementById("myDropdown");
@@ -13,6 +17,9 @@ function pageContentsOffset(){
 		dropdown.style.height = (window_height - parseInt(navOffset)) + "px";
 	    dropdown.style.top = navOffset;
 	    document.getElementById('map').style.paddingTop = navOffset;
+	    var chatWin = document.getElementsByClassName('containerChat')[0];
+	    //chatWin.style.top = 
+	    chatWin.style.top = window_height - (.4*window_height)+ "px";
 	    //document.getElementsByClassName('bodyBack')[0].style.paddingTop = navOffset;
 }
 
@@ -29,14 +36,26 @@ function displayToggle(item){
 		item.style.display = "none"
 }
 
+function chatWindow(item){
+	console.log(item);
+	document.getElementById('chatTitle').innerHTML = item;
+	document.getElementById('theChat').style.display = "block";
+}
+
+function closeChat(){
+		document.getElementById('theChat').style.display = "none";
+}
+
+function printMessage(){
+	input = document.getElementById("mesbox").value;
+	mes.innerHTML = divr + input + '</div>';
+}
 pageContentsOffset();
 
-//given address, find location of data using fully associative, direct, and set associative
-//getting off final: cache & cache management, study this
-//getting off final: pipeline hazards (structural hazards[1 ALU to handle all computations, so added adders]
-//[More significant problem: solved data usage problem, used a mux to hang on to value]
-//[Phase 1:Always fetching instruction Phase 4: always doing something, so split up cache to level 1 i and level 1 d]
-//, data hazards[getting ALU result, pass it on but also hold on to data so if while decoding, previous result is
-//needed, still have it][change the order, do all loads up front to preload data, etc.],
-//control hazard(caused by branch statements)[force pick a route and go there instead of waiting for loop, at worst,
-//it's like we waited for the answer. Now systems analyze code to predict compilation for code])
+$(document).keypress(function(e) {
+  	if (e.which == 13) {
+  		printMessage();
+
+  		$(document).find('#chatBox').append(mes);
+	}
+});
