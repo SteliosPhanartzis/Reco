@@ -19,7 +19,7 @@ function pageContentsOffset(){
 	    document.getElementById('map').style.paddingTop = navOffset;
 	    var chatWin = document.getElementsByClassName('containerChat')[0];
 	    //chatWin.style.top = 
-	    chatWin.style.top = window_height - (.4*window_height)+ "px";
+	    chatWin.style.top = window_height - (.42*window_height)+ "px";
 	    //document.getElementsByClassName('bodyBack')[0].style.paddingTop = navOffset;
 }
 

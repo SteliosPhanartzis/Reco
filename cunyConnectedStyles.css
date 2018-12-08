@@ -45,8 +45,11 @@
 	float: right;
 	background-color: white;
 	height: 40vh;
-	width: 12%;
-	left: 85%;
+	width: 18%;
+	left: 78%;
+	display: none;
+}
+.eventSideDet{
 	display: none;
 }
 .chatBox{
