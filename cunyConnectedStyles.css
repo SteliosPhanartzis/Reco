@@ -48,9 +48,21 @@
 	width: 18%;
 	left: 78%;
 	display: none;
+	border: solid 0.25px gray;
 }
 .eventSideDet{
 	display: none;
+}
+#friendView{
+	position: absolute;
+	display: block;
+	height: 5%;
+	top: 0;
+	cursor: pointer;
+	border: solid 0.25px gray;
+}
+#friendView h2{
+	margin: 0.5em 1em;
 }
 .chatBox{
 	position: relative;
@@ -60,7 +72,7 @@
 	border-radius: 1px;
     overflow: scroll;
     z-index: 1000;
-	min-height: 72%;
+	min-height: 71%;
 	max-height: 80%;
 }
 
@@ -128,6 +140,7 @@
 	border-radius: 5em;
 	top: -3px;
 	display: inline-block;
+	margin: 0 1%;
 	border: solid black 1.5px;
 }
 .online{
@@ -135,7 +148,16 @@
 }
 .offline{
 }
+#FriendsList {
+	display: none;
+	background-color: white;
+	width: 100%;
+	border: solid 0.25px gray;
+}
 #FriendsList li{
+	margin: 1em 0;
+	text-decoration: none;
+	list-style-type: none;
 	cursor: pointer;
 }
 #myDropdown{
@@ -236,7 +258,9 @@ transform: rotate(-45deg) translate(-9px, 6px);
 	padding-right: 4%;
 	padding-bottom: 2%;
 }
-
+#theChat{
+	left: 60%;
+}
 #eventHeading{
 	/* font-family:'Cormorant', serif; */
 	/* font-weight: bold; */

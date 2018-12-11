@@ -55,8 +55,14 @@
                 source: function (request, response) {
                     geocoder.geocode({
                         'address': request.term
+                       //'cities': request.term
                     }, function (results, status) {
                         response($.map(results, function (item) {
+                        // var autocmp = new google.maps.places.Autocomplete(request.term,{types: ['(cities)']});
+                        //       google.maps.event.addListener(autocmp, 'place_changed', function(){
+                        //       var place = autocmp.getPlace();
+                        //       console.log(place);
+                        //});
                             return {
                                 label: item.formatted_address,
                                 value: item.formatted_address,
