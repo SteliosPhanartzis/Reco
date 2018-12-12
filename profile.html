@@ -7,46 +7,63 @@
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="cunyConnectedStyles.css">
+		<link rel="stylesheet" href="cunyConnectedStyles.css">
+		<link rel="stylesheet" href="mycss.css">
 
 	<title>Reco</title>
 </head>
-<body onresize="resizeElements()">
-	<div class=container-fluid>
+<body>
+
+	<div class="container-fluid h-100">
 
 			<nav class="navbar navbar-dark bg-dark justify-content-between" id="navbpar-top"  >
-	  				<a class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Map</a>
+	  				<a class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Reco</a>
 	    			<form onclick="hamburgler(this)" action="./cunyConnect.html" method="get" class="form-inline ml-sm-0 mr-auto col-lg-8" id="searchDiv">
 	      				<input class="form-control ml-auto mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search">
 	      				<button class="btn btn-outline-success my-1 mr-auto" type="submit">Search</button>
 	    			</form>
 
-
-              <div class="dropdown">
-                <img class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./images/profileIcon.png" style="width: 40px;"/>
-
-                <div style="overflow: visible;" class="dropdown-menu"  aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <a class="dropdown-item" href="#">Logout</a>
-                </div>
-              </div>
+            <img class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./images/profileIcon.png" style="width: 40px;"/>
 			</nav>
 
-      <div class="row">
-        <div class="col-2 m-auto pt-2">
-        </div>
-      </div>
 
 
 
+		<div class="row h-100">
+			<div class="col-2  text-center text-light">
+				<div class="p-2">
+					<img class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./images/profileIcon.png" style="width: 100px;"/>
+				</div>
+				<div class="badge d-block p-4 bar-options" onclick="console.log('hell')" >Friends</div>
+				<div class="badge d-block p-4 bar-options" >My Reviews</div>
+				<div class="badge d-block p-4 bar-options" >Popular Events </div>
+				<div class="badge d-block p-4 bar-options" >Upcoming Events </div>
+				<div class="badge d-block p-4 bar-options" >Logout </div>
+			</div>
 
-	</div>
+			<div class="col-10 bg-dark ">
+				<div class="profile-map" id="map"> </div>
+			</div>
+		</div>
+</div>
+
 </body>
+
+
+<p class="hide">Address: <input type="text" class="search_addr" size="45"></p>
+<p class="hide">Latitude: <input type="text" class="search_latitude" size="30"></p>
+<p class="hide">Longitude: <input type="text" class="search_longitude" size="30"></p>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtGxlx-hvrPaP3c9PDAheL0QJhkokyCXw&libraries=places&callback=initMap"
+async defer></script>
+<script src="./gmaps.js"></script>
+<script src="./documentLoad.js"></script>
+<!-- <script src="./eventLoad.js"></script> -->
 
 </html>

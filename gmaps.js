@@ -1,4 +1,4 @@
-   var map, places;
+      var map, places;
       var geocoder;
       var marker;
 
@@ -7,11 +7,11 @@
         var initialLong = $('.search_longitude').val();
         initialLat = initialLat?initialLat:40.712776;
         initialLong = initialLong?initialLong:-74.005974;
-        
+
           let promise = new Promise((resolve, reject) => {
             setTimeout(() => resolve("done!"), 2000)
           });
-        
+
         var latlng = new google.maps.LatLng(initialLat, initialLong);
 
         map = new google.maps.Map(document.getElementById('map'), {
@@ -20,7 +20,7 @@
         });
 
         geocoder = new google.maps.Geocoder();
-        
+
         marker = new google.maps.Marker({
             map: map,
             draggable: true,
@@ -45,7 +45,7 @@
         $(document).ready(function () {
         //load google map
         initMap();
-    
+
         /*
          * autocomplete location search
          */
@@ -82,7 +82,7 @@
                 }
             });
         });
-        
+
         /*
          * Point location on google map
          */
