@@ -17,8 +17,10 @@ function pageContentsOffset(){
 		navOffset = document.defaultView.getComputedStyle(document.getElementById('navbar-top'), "").getPropertyValue("height");
 		dropdown = document.getElementById('myDropdown');
 		//sizing
-		dropdown.style.height = (window_height - parseInt(navOffset)) + "px";
-	    dropdown.style.top = navOffset;
+		if(dropdown != null){
+			dropdown.style.height = (window_height - parseInt(navOffset)) + "px";
+	    	dropdown.style.top = navOffset;
+		}
 	    document.getElementById('map').style.top = navOffset;
 	    //chatWin.style.top = 
 	    chatWin.style.top = window_height - (.42*window_height)+ "px";
@@ -80,5 +82,4 @@ function profileClick(){
 function dropFriends(){
 	document.getElementById('FriendsSide');
 }
-displayToggle('loginForm');
 displayToggle('FriendsList');

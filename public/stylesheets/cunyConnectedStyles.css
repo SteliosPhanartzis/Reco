@@ -277,6 +277,7 @@ transform: rotate(-45deg) translate(-9px, 6px);
 }
 #theChat{
 	left: 60%;
+	z-index:1000;
 }
 #eventHeading{
 	/* font-family:'Cormorant', serif; */
