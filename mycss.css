@@ -6,6 +6,15 @@ body, html {
   min-height: 100%;
 }
 
+.name {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+
+#login{
+  color: black;
+}
 
 .profile-map{
   height: 90%;

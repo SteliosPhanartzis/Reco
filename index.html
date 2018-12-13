@@ -40,26 +40,33 @@
             <input class = "form-control" style = "width: 70%;" type = "password" name = "pass" id = "pass">
         </div>
         <div class = "form-inline mt-4" style = "display: flex; margin-left: 75%;">
-            <input class = "btn" style = "display: flex;" type = "submit" name = "submitLogin" id = "submitLogin" value = "Login">
+            <input type="button" class="btn btn-primary btnSeccion" id="btnSeccion3" value="Continuar"/>
         </div>
     </form>
-		<span class="dropdown-menu row" id="myDropdown">
-			<ul>
-          <h2 id = "eventsSide">Events</h2>
-            <ul>
-                <li class = "EventSide"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Northside Festival</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Link</a></div></li>
-                <li class = "EventSide"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">House of Yes</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
-                <li class = "EventSide"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Then She Fell</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
-                <li class = "EventSide"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Museum of the Moving Image</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Link</a></div></li>
-            </ul>
-				</ul>
-		</span>
+
+		<div class="row">
+			<div class="col-2">
+
+				<span class="dropdown-menu " id="myDropdown">
+						<ul>
+				        <h2 id = "eventsSide">Events</h2>
+				          <ul>
+				              <li class = "EventSide"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Northside Festival</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Link</a></div></li>
+				              <li class = "EventSide"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">House of Yes</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
+				              <li class = "EventSide"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Then She Fell</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
+				              <li class = "EventSide"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Museum of the Moving Image</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Link</a></div></li>
+				          </ul>
+							</ul>
+				</span>
+
+			</div>
+		</div>
 	</div>
 
 <div class="index-map" id="map"></div>
 
 <div class="containerChat" id = "theChat">
-    <h4 class="display-4 text-center"> <span id = "chatTitle">User</span><input type = "button" class = "btn" value = "X" style = "float: right;" onclick = "closeChat()"></span></h4>
+    <h4 class="display-4 text-center"> <span id = "chatTitle"> User </span><input type = "button" class = "btn" value = "X" style = "float: right;" onclick = "closeChat()"></span></h4>
     <div class="chatBox" id="chatBox">
         <div class="response"><strong>Nelson:</strong> <br>Are we going to present?</div>
         <div id="request"></div>

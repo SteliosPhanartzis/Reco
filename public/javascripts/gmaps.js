@@ -7,20 +7,21 @@
         var initialLong = $('.search_longitude').val();
         initialLat = initialLat?initialLat:40.712776;
         initialLong = initialLong?initialLong:-74.005974;
-        
+
           let promise = new Promise((resolve, reject) => {
             setTimeout(() => resolve("done!"), 2000)
           });
-        
+
         var latlng = new google.maps.LatLng(initialLat, initialLong);
 
         map = new google.maps.Map(document.getElementById('map'), {
           center: latlng,
-          zoom: 12
+          zoom: 12,
+          styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
         });
 
         geocoder = new google.maps.Geocoder();
-        
+
         marker = new google.maps.Marker({
             map: map,
             draggable: true,
@@ -45,7 +46,7 @@
         $(document).ready(function () {
         //load google map
         initMap();
-    
+
         /*
          * autocomplete location search
          */
@@ -82,7 +83,7 @@
                 }
             });
         });
-        
+
         /*
          * Point location on google map
          */

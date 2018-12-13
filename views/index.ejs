@@ -5,7 +5,7 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<meta charset="UTF-8"> 	
+	<meta charset="UTF-8">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -19,49 +19,48 @@
 <body onresize="resizeElements()">
 	<div class=container-fluid>
 		<nav class="navbar navbar-dark bg-dark justify-content-between col-12" id="navbar-top" >
-  				<div class="ml-0 mr-auto d-inline">
+  			<div class="ml-0 mr-auto d-inline">
   					<div class = "hamburgler d-inline-block ml-0 mr-5" onclick="hamburgler(this)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></div>
   					<a class="navbar-brand ml-auto mr-0 d-inline" id="brandName" href="">Reco</a>
-  				</div>
-    			<form method="get" class="form-inline ml-auto mr-auto col-10" id="searchDiv">
-      				<input class="form-control ml-auto mr-2" type="search" placeholder="Search" aria-label="Search" id="search">
-      				<button class="btn btn-outline-success mr-auto" type="submit">Search</button>
-    			</form>
-    			<div class="ml-auto mr-auto navbar-brand" id = "loginTrigger" onclick = "displayToggle('loginForm')">
-    				Login
-    			</div>
-        </nav> 
-                <form class = "form-inline" style="position:absolute; left: 35%; top: 40%; background-color: white; z-index: 100; width: 30%; height: 20%;" id = "loginForm">
-                    <div class = "form-inline ml-5 mt-5">
-                        <label for = "user">Username:</label>
-                        <input class = "form-control" style = "width: 70%;" type = "text" name = "user" id = "user">
-                    </div>
-                    <div class = "form-inline ml-5 mt-4">
-                        <label for = "pass">Password:</label>
-                        <input class = "form-control" style = "width: 70%;" type = "password" name = "pass" id = "pass">
-                    </div> 
-                    <div class = "form-inline mt-4" style = "display: flex; margin-left: 75%;">
-                        <input  class = "btn" style = "display: flex;" type = "submit" name = "submitLogin" id = "submitLogin" value = "Login">
-                    </div>
-                </form>
-		<span class="dropdown-menu row" id="myDropdown">
-			<ul>
-				<li>
-                    <h2 id = "eventsSide">Events</h2>
-                    <ul>
-                        <li class = "EventSide"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Northside Festival</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Link</a></div></li>
-                        <li class = "EventSide"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">House of Yes</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
-                        <li class = "EventSide"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Then She Fell</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
-                        <li class = "EventSide"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Museum of the Moving Image</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Link</a></div></li>
-                    </ul>
-                </li>
+  			</div>
+  			<form method="get" class="form-inline ml-auto mr-auto col-10" id="searchDiv">
+    				<input class="form-control ml-auto mr-2" type="search" placeholder="Search" aria-label="Search" id="search">
+    				<button class="btn btn-outline-success mr-auto" type="submit">Search</button>
+  			</form>
+  			<div class="ml-auto mr-auto navbar-brand" id = "loginTrigger" onclick = "displayToggle('loginForm')">Login</div>
+		</nav>
 
-				<li>
-                </li>
-			</ul>
+    <form class = "form-inline" style="position:absolute; left: 35%; top: 40%; background-color: white; z-index: 100; width: 30%; height: 20%;" id = "loginForm">
+        <div class = "form-inline ml-5 mt-5">
+            <label for = "user">Username:</label>
+            <input class = "form-control" style = "width: 70%;" type = "text" name = "user" id = "user">
+        </div>
+        <div class = "form-inline ml-5 mt-4">
+            <label for = "pass">Password:</label>
+            <input class = "form-control" style = "width: 70%;" type = "password" name = "pass" id = "pass">
+        </div>
+        <div class = "form-inline mt-4" style = "display: flex; margin-left: 75%;">
+					<!--login button-->
+
+
+        </div>
+    </form>
+
+
+		<span class="dropdown-menu bg-dark col-2" id="myDropdown" >
+			<ul>
+          <h2 class="text-light" id = "eventsSide">Events</h2>
+            <ul>
+                <li><a class = "event-txt" href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Northside Festival</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/northside-festival-williamsburg?osq=Events+This+Weekend">Link</a></div></li>
+                <li><a class = "event-txt" href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">House of Yes</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/house-of-yes-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
+                <li><a class = "event-txt" href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Then She Fell</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/then-she-fell-brooklyn?osq=Events+This+Weekend">Link</a></div></li>
+                <li><a class = "event-txt" href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Museum of the Moving Image</a><div class = "eventSideDet"><a href = "https://www.yelp.com/biz/museum-of-the-moving-image-astoria?osq=Events+This+Weekend">Link</a></div></li>
+            </ul>
+				</ul>
 		</span>
 	</div>
-    <div id="map"></div>
+
+<div class="index-map" id="map"></div>
 
 <div class="containerChat" id = "theChat">
     <h4 class="display-4 text-center"> <span id = "chatTitle"> User </span><input type = "button" class = "btn" value = "X" style = "float: right;" onclick = "closeChat()"></span></h4>
@@ -69,7 +68,7 @@
         <div class="response"><strong>Nelson:</strong> <br>Are we going to present?</div>
         <div id="request"></div>
     </div>
-    <input class="w3-input" id="mesbox" type="text" placeholder="input here...">         
+    <input class="w3-input" id="mesbox" type="text" placeholder="input here...">
 </div>
 <div class = "containerChat" id = "friendView" onclick = "friendsToggle()">
     <h2>Friends</h2>

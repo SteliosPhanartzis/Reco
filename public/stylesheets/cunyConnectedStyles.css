@@ -3,6 +3,14 @@
 	margin: 0 !important;
 	overflow: hidden;
 }
+
+
+.event-txt {
+	color: white;
+	font-size: 20px;
+}
+
+
 #FeaturedPhotos .col-lg-3{
 	border-radius: 8%;
 	max-width: 25%;
@@ -91,9 +99,9 @@
 .w3-input{
 	padding:10px;
 	display:block;
-	border:1px solid #ccc; 
+	border:1px solid #ccc;
 	width:100%;
-	height: 15%; 
+	height: 15%;
  	bottom: 0;
  	margin: 1px auto !important;
  }
@@ -183,9 +191,9 @@
 }
 .bar1, .bar2, .bar3{
 	width: 35px;
-	height: 5px; 
+	height: 5px;
 	border-radius: 3px;
-	background-color: #FFF;   
+	background-color: #FFF;
 	margin: 6px auto;
 	transition: 0.1s ease-in-out;
 	display: block;
@@ -201,7 +209,7 @@ transform: rotate(-45deg) translate(-9px, 6px);
  transform: rotate(45deg) translate(-8px, -8px);
 }
 #mainView {
-	display: inline;	
+	display: inline;
 	/* text-align: center; */
 }
 #mainView h1{
@@ -289,10 +297,3 @@ transform: rotate(-45deg) translate(-9px, 6px);
 #e4 h3{
 	margin-left: 22%;;
 }
-
-
-
-
-
-
-

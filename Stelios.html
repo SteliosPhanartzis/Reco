@@ -24,8 +24,8 @@
 		<div class="container-fluid h-100">
 
 				<nav class="navbar navbar-dark bg-dark justify-content-between" id="navbpar-top"  >
-		  				<a href="index.html" class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Reco</a>
-		    			<form action="./cunyConnect.html" method="get" class="form-inline ml-sm-0 mr-auto col-lg-8" id="searchDiv">
+		  				<a class="navbar-brand ml-sm-2 mr-auto" id="brandName" href="#">Reco</a>
+		    			<form onclick="hamburgler(this)" action="./cunyConnect.html" method="get" class="form-inline ml-sm-0 mr-auto col-lg-8" id="searchDiv">
 								<input class="form-control ml-auto mr-2" type="search" placeholder="Search" aria-label="Search" id="search">
 								<button class="btn btn-outline-success mr-auto" type="submit">Search</button>
 		    			</form>
@@ -39,12 +39,9 @@
 			<div class="row h-100">
 				<div class="col-2  text-center bg-dark text-light">
 					<div class="p-2">
-						<div class="name p-2">
-							Stelios
-						</div>
 						<img class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="./images/profileIcon.png" style="width: 100px;"/>
 					</div>
-					<div class="badge d-block p-4 bar-options pt-5" onclick="alert('hel')" >Friends</div>
+					<div class="badge d-block p-4 bar-options" >Friends</div>
 					<div class="badge d-block p-4 bar-options" >My Reviews</div>
 					<div class="badge d-block p-4 bar-options" >Popular Events </div>
 					<div class="badge d-block p-4 bar-options" >Upcoming Events </div>
