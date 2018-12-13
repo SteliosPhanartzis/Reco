@@ -303,3 +303,13 @@ transform: rotate(-45deg) translate(-9px, 6px);
 #e4 h3{
 	margin-left: 22%;;
 }
+#eventHeading{
+	/* font-family:'Cormorant', serif; */
+	/* font-weight: bold; */
+	text-shadow: 2px 2px 4px #000000;
+	font-size: 62px;
+	color: #FFF;
+	padding-left: 3%;
+	padding-top: 2%;
+	padding-bottom: 3%;
+}
