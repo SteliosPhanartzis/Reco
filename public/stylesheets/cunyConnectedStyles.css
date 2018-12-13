@@ -313,3 +313,6 @@ transform: rotate(-45deg) translate(-9px, 6px);
 	padding-top: 2%;
 	padding-bottom: 3%;
 }
+#profButton{
+	cursor: pointer;
+}

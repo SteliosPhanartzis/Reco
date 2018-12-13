@@ -68,10 +68,17 @@ pageContentsOffset();
 $(document).keypress(function(e) {
   	if (e.which == 13) {
   		printMessage();
-
   		$(document).find('#chatBox').append(mes);
+  		document.getElementById('mesbox').value = "";
 	}
 });
 
+function profileClick(){
+  $( "#profForm" ).submit();
+}
+
+function dropFriends(){
+	document.getElementById('FriendsSide');
+}
 displayToggle('loginForm');
 displayToggle('FriendsList');

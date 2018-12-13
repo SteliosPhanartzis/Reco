@@ -19,7 +19,7 @@
 		<title>Reco</title>
 	</head>
 
-	<body>
+	<body onresize="resizeElements()">
 
 		<div class="container-fluid h-100">
 
@@ -44,15 +44,19 @@
 						</div>
 						<img class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="/images/profileIcon.png" style="width: 100px;"/>
 					</div>
-					<div class="badge d-block p-4 bar-options pt-5" onclick="alert('hel')" >Friends</div>
+					<div class="badge d-block p-4 bar-options pt-5"onclick="dropFriends()" >Friends</div>
+					<!-- <div id ="FriendsSide" ></div> -->
 					<div class="badge d-block p-4 bar-options" >My Reviews</div>
 					<div class="badge d-block p-4 bar-options" >Popular Events </div>
 					<div class="badge d-block p-4 bar-options" >Upcoming Events </div>
-					<div class="badge d-block p-4 bar-options" >Logout </div>
+					<div class="badge d-block p-4 bar-options" ><a href = "/" style = "color: white">Logout</a></div>
 				</div>
 
 				<div class="col-10 bg-dark ">
 					<div class="profile-map" id="map"> </div>
+	<div style="position: fixed; top: 90vh">
+		<%- chat %>
+	</div>
 				</div>
 			</div>
 	</div>
