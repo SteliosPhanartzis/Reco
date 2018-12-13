@@ -4,6 +4,12 @@
 	overflow: hidden;
 }
 
+.event-txt:hover {
+	color: white;
+	background-color: #616d77;
+	text-decoration: none;
+}
+
 
 .event-txt {
 	color: white;
