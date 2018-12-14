@@ -82,4 +82,10 @@ function profileClick(){
 function dropFriends(){
 	document.getElementById('FriendsSide');
 }
+
+function e1(){
+	var img = '<image src="https://s3-media1.fl.yelpcdn.com/bphoto/2tk6EhYQSqOwaIqbWyEcag/o.jpg" width = "90%" style = "left: 10%">'
+	document.getElementById('myDropdown').innerHTML = img;
+}
+
 displayToggle('FriendsList');
